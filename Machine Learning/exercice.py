@@ -157,7 +157,6 @@ class Colis(Courrier):
         print("Prix du timbre: "+str(self.calculTimbre()))
 
     def calculTimbre(self):
-        tarifBase = 0
         if self.expedition == "normal":
             return 0.25*self.volume+self.poids*1.0
         else:
