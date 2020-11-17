@@ -55,4 +55,9 @@ st.write('Vous avez choisi:', list_result, ' qui est de type', data_video_games[
 
 st.title("Affichage de la shape du dataset")
 
-data_video_games.shape
+st.write('Il y a ', data_video_games.shape[0], ' lignes et ', data_video_games.shape[1], ' colonnes')
+
+st.title("Affichage de la shape du dataset")
+
+st.write(data_video_games.describe())
+
