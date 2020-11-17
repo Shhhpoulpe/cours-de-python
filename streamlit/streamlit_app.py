@@ -56,7 +56,7 @@ st.title("Affichage de la shape du dataset")
 
 st.write('Il y a ', data_video_games.shape[0], ' lignes et ', data_video_games.shape[1], ' colonnes')
 
-st.title("Affichage de la shape du dataset")
+st.title("Affichage de la description du dataset")
 
 st.write(data_video_games.describe())
 
