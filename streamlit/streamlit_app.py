@@ -1,8 +1,7 @@
 import streamlit as st
 import pandas as pd
 import numpy as np
-import altair as alt
-import pydeck as pdk
+import seaborn as sea
 
 video_games_URL = (
     "streamlit/csv/Video_Games_Sales.csv"
@@ -61,3 +60,13 @@ st.title("Affichage de la shape du dataset")
 
 st.write(data_video_games.describe())
 
+st.title("Affichage de la heatmap")
+
+mask = np.zeros_like(data_video_games.corr(), dtype=np.bool)
+mask[np.triu_indices_from(mask)] = True
+corr_map=sea.color_palette("pastel")
+
+sea.heatmap(data_video_games.corr(), mask=mask, cmap=corr_map, vmax=1, center=0,annot = True,
+            square=True, linewidths=.5, cbar_kws={"shrink": .5})
+st.set_option('deprecation.showPyplotGlobalUse', False)
+st.pyplot()
