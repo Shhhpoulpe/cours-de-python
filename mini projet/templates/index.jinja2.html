@@ -27,14 +27,20 @@
 </head>
 <body>
     {% if categ1 == "Podium"%}
-        <div class="name">
-            Name: {{info}}
+        <div>
+            <img class="image"
+                src="static/images/{{info}}.jpg">
+            <div class="name">
+                Name: {{info}}
+            </div>
         </div>
     {% endif %}
 
     {% if categ1 == "Log in" %}
         {% for data in info %}
             <div>
+                <img class="image"
+                    src="static/images/{{data}}.jpg">
                 <div class="name">
                     Name: {{data}}
                 </div>
@@ -45,6 +51,8 @@
     {% if categ1 == "Double money" %}
         {% for data in info %}
             <div>
+                <img class="image"
+                    src="static/images/{{data}}.jpg">
                 <div class="name">
                     Name: {{data}}
                 </div>
@@ -55,6 +63,8 @@
     {% if categ1 == "Triple money" %}
         {% for data in info %}
             <div>
+                <img class="image"
+                    src="static/images/{{data}}.jpg">
                 <div class="name">
                     Name: {{data}}
                 </div>
@@ -65,6 +75,8 @@
     {% if categ1 == "Discounts" and categ2 == "Cars" %}
         {% for data in info %}
             <div>
+                <img class="image"
+                        src="../static/images/{{data[0]}}.jpg">
                 <div class="name">
                     Name: {{data[0]}}
                 </div>
@@ -79,6 +91,8 @@
     {% if categ1 == "Discounts" and categ2 == "Properties" %}
         {% for data in info %}
             <div>
+                <img class="image"
+                    src="../static/images/{{data[0]}}.jpg">
                 <div class="name">
                     Name: {{data[0]}}
                 </div>

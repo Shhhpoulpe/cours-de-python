@@ -11,8 +11,6 @@ la page internet
 
 app = Flask(__name__)
 
-
-
 def index_fun(categ1 = "all", categ2 = None):
     # Ouverture du template
     file_loader = FileSystemLoader('templates')
