@@ -1,5 +1,92 @@
 <title> GTA Online weekly</title>
-<h1>
-    This weeks rotation
-</h1>
-{{info}}
+<head>
+    <h1>
+        This weeks rotation
+    </h1>
+
+    <div class="buttons">
+        <form action="/podium">
+            <input type="submit" value="Podium" />
+        </form>
+        <form action="/login">
+            <input type="submit" value="Login" />
+        </form>
+        <form action="/double">
+            <input type="submit" value="Double Money" />
+        </form>
+        <form action="/triple">
+            <input type="submit" value="Triple Money" />
+        </form>
+        <form action="/discounts/cars">
+            <input type="submit" value="Cars" />
+        </form>
+        <form action="/discounts/properties">
+            <input type="submit" value="Properties" />
+        </form>
+    </div>
+</head>
+<body>
+    {% if categ1 == "Podium"%}
+        <div class="name">
+            Name: {{info}}
+        </div>
+    {% endif %}
+
+    {% if categ1 == "Log in" %}
+        {% for data in info %}
+            <div>
+                <div class="name">
+                    Name: {{data}}
+                </div>
+            </div>
+        {% endfor %}
+    {% endif %}
+
+    {% if categ1 == "Double money" %}
+        {% for data in info %}
+            <div>
+                <div class="name">
+                    Name: {{data}}
+                </div>
+            </div>
+        {% endfor %}
+    {% endif %}
+
+    {% if categ1 == "Triple money" %}
+        {% for data in info %}
+            <div>
+                <div class="name">
+                    Name: {{data}}
+                </div>
+            </div>
+        {% endfor %}
+    {% endif %}
+
+    {% if categ1 == "Discounts" and categ2 == "Cars" %}
+        {% for data in info %}
+            <div>
+                <div class="name">
+                    Name: {{data[0]}}
+                </div>
+                <div class="price">
+                    Price: {{data[1]}}$
+                </div>
+                </p>
+            </div>
+        {% endfor %}
+    {% endif %}
+
+    {% if categ1 == "Discounts" and categ2 == "Properties" %}
+        {% for data in info %}
+            <div>
+                <div class="name">
+                    Name: {{data[0]}}
+                </div>
+                <div class="price">
+                    Réduction: {{data[1]}}%
+                </div>
+                </p>
+            </div>
+        {% endfor %}
+    {% endif %}
+</body>
