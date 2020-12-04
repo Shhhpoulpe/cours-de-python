@@ -1,5 +1,6 @@
 from flask import Flask
 from flask import request
+from flask_bootstrap import Bootstrap
 from jinja2 import Template, FileSystemLoader, Environment
 import json
 
@@ -10,6 +11,7 @@ la page internet
 """
 
 app = Flask(__name__)
+Bootstrap(app)
 
 def index_fun(categ1 = "all", categ2 = None):
     # Ouverture du template
