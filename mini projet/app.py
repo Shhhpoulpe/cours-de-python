@@ -10,7 +10,6 @@ la page internet
 """
 
 app = Flask(__name__)
-Bootstrap(app)
 
 def index_fun(categ1 = "all", categ2 = None):
     # Ouverture du template
@@ -75,4 +74,4 @@ def discounts_Properties():
     return response
 
 if __name__ == '__main__':
-    app.run(debug=True)
+    app.run(debug=True, host="0.0.0.0", port=5000)
