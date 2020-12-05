@@ -1,6 +1,5 @@
 from flask import Flask
 from flask import request
-from flask_bootstrap import Bootstrap
 from jinja2 import Template, FileSystemLoader, Environment
 import json
 
