@@ -42,7 +42,7 @@ def get_weekly_info(categ1 = "all", categ2 = None):
 
 @app.route('/')
 def index():
-    response = index_fun()
+    response = index_fun("Podium")
     return response
 
 @app.route('/podium')
