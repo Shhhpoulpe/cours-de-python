@@ -1,4 +1,4 @@
-FROM python:3.6-slim
+FROM tiangolo/uvicorn-gunicorn-fastapi:python3.7
 
 WORKDIR /usr/src/app
 
@@ -12,4 +12,4 @@ RUN pip3 install -r requirements.txt
 
 EXPOSE 5000
 
-CMD ["python","app.py"]
+CMD ["uvicorn", "main:app","--host", "0.0.0.0", "--port", "5000"]
