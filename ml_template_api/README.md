@@ -26,12 +26,22 @@ Dockerfile:
 
 - Dockerisation de main.py afin de pouvoir le déployer sur ma VM Google Cloud
 
-## Utilisation
+## Utilisation depuis un navigateur
 
-Route : 34.122.220.115:5000/?name=TEST
+Route : 0.0.0.0:5000/?name=TEST
 
 La variable du nom du projet doit être après name dans l'URL et retourne un string avec la catégorie du projet prédis par l'algorithme.
 
 Ex:
 
 ![](images/payday.png)
+
+## Utilisation depuis une VM google cloud
+
+Depuis la racine de la VM 34.122.220.115, utiliser la commande sh googleCloudTest.sh et donner le nom du projet après le prompt
+
+Sinon, la commande curl 0.0.0.0:5000/?name=TEST pour faire la requête directement
+
+Ex:
+
+![](images/payday2.png)
